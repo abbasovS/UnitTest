@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5434/trade_db
+    driver-class-name: org.postgresql.Driver
+
+
+  application:
+    name: ms-trade
+  config:
+    import: "vault://"
+  cloud:
+    vault:
+      uri: http://localhost:8200
+      token: myroot
+      kv:
+        enabled: true
+
+  liquibase:
+    change-log: classpath:liquibase/changelog-master.yml
+    enabled: true
+server:
+  port: 8085

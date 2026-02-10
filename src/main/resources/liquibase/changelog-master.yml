@@ -1,0 +1,10 @@
+databaseChangeLog:
+
+  - include:
+      file: liquibase/1.0/002-create-cotest-table.yml
+
+  - include:
+      file: liquibase/1.0/003-create-trade-table.yml
+
+  - include:
+      file: liquibase/1.0/001-create-user-table.yml
